@@ -1,0 +1,20 @@
+.Notifications {
+    border: 1px dotted red;
+    background-color: seashell;
+    padding: 2rem;
+    font-family: "Arial", Helvetica, sans-serif;
+    padding: 0;
+}
+
+.close-icon {
+    height: 22px;
+    width: 22px;
+}
+
+ul li[data='default'] {
+    color: blue;
+}
+
+ul li[data='urgent'] {
+    color: red;
+}
