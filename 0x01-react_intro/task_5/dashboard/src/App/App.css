@@ -1,0 +1,44 @@
+.App {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1rem;
+}
+
+.App-header img {
+  height: 200px;
+  width: 200px;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid #e0354b;
+}
+
+.App-header h1 {
+  color: #e0354b;
+}
+
+.App-body {
+  color: #000;
+  height: 40vh;
+  margin: 2.5rem;
+}
+
+.App-body p {
+  font-weight: 550;
+}
+
+.App-body label {
+  font-weight: 550;
+}
+
+.App-body input {
+  margin: 0.5rem;
+}
+
+.App-footer {
+  border-top: 3px solid #e0354b;
+  text-align: center;
+  font-style: italic;
+}
