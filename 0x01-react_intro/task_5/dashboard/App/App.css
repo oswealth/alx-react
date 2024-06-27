@@ -1,0 +1,53 @@
+#root {
+  --main-color: #e0003c;
+  --main-font: 'Lato', sans-serif;
+}
+
+.App-logo {
+  height: 30vh;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 25px;
+}
+
+hr {
+  border: 2px solid var(--main-color);
+  margin: 4px 0;
+}
+
+#footer-margin {
+  position: absolute;
+  bottom: 80px;
+  width: 99%;
+}
+.App-body {
+  padding: 40px;
+  font-family: var(--main-font);
+}
+
+.App-footer { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 99vw;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  font-family: var(--main-font);
+}
+
+input {
+  margin: 0px 10px;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 4px;
+}

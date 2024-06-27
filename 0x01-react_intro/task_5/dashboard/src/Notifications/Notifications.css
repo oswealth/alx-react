@@ -1,0 +1,18 @@
+.Notifications {
+  padding: 10px;
+  border: 2px dashed #e0003c;
+  font-family: 'Lato', sans-serif;
+}
+
+.close-icon {
+  height: 22px;
+  width: 22px;
+}
+
+li[data-priority="default priority"] {
+  color: blue;
+}
+
+li[data-priority="urgent priority"] {
+  color: red;
+}
