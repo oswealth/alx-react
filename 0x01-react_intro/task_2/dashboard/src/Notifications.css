@@ -1,20 +1,18 @@
 .Notifications {
-    border: 1px dotted red;
-    background-color: seashell;
-    padding: 2rem;
-    font-family: "Arial", Helvetica, sans-serif;
-    padding: 0;
+    border: 1px dashed #f81a3d;
+    padding: 10px;
+    position: relative;
+    margin: 1rem;
 }
 
-.close-icon {
-    height: 22px;
-    width: 22px;
+.Notifications p {
+    font-weight: 550;
 }
 
-ul li[data='default'] {
+.Notifications li[data-priority="default"] {
     color: blue;
 }
 
-ul li[data='urgent'] {
+.Notifications li[data-priority="urgent"] {
     color: red;
 }
