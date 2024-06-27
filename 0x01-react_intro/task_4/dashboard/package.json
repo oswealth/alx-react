@@ -1,14 +1,14 @@
 {
-  "homepage": "https://oswealth.github.io/alx-react/",
   "name": "dashboard",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://oswealth.github.io/alx-react",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.8",
     "enzyme-to-json": "^3.6.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -16,13 +16,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-},
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "postdeploy": "echo 'Deployed to GitHub Pages'",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -42,6 +43,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "jest": "^27.5.1"
   }
 }
