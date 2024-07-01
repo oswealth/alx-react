@@ -7,9 +7,9 @@ It's component-based, which means you can build encapsulated components that man
 
 # Learning Objectives
 
-* How to create a basic Javascript application using React
-* How to use the package create-react-app to start developing quickly with React
-* What JSX is and how to use it
-* How to use the React Developer Tools to debug your code
-* How to use Enzyme’s Shadow rendering to test your application
-* How to use React with Webpack & Babe
+* How to create basic React components using functions
+* How to reuse components
+* How to pass properties to components
+* How to define types for components
+* How to use Fragments
+* When to use a key to improve a loop’s performance
