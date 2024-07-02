@@ -9,10 +9,20 @@
     font-weight: 550;
 }
 
-.Notifications li[data-priority="default"] {
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.menuItem {
+    text-align: right;
+}
+
+[data-notification-type="default"] {
     color: blue;
 }
 
-.Notifications li[data-priority="urgent"] {
+[data-urgent],
+[data-notification-type="urgent"] {
     color: red;
 }
