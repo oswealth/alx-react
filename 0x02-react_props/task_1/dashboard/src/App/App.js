@@ -1,18 +1,21 @@
 import React from 'react';
-import './App.css';
+import Notifications from '../Notifications/Notifications';
 import Header from '../Header/Header';
 import Login from '../Login/Login';
 import Footer from '../Footer/Footer';
-import Notifications from '../Notifications/Notifications';
+import './App.css';
+
 
 function App() {
   return (
-    <>
+    <React.Fragment>
       <Notifications />
-      <Header />
-      <Login />
-      <Footer />
-    </>
+      <div className="App">
+        <Header />
+        <Login />
+        <Footer />
+      </div>
+    </React.Fragment>
   );
 }
 
