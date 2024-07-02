@@ -19,4 +19,3 @@ describe('Utils functions', () => {
         expect(getLatestNotification()).toBe(expectedString);
     });
 });
-
