@@ -1,0 +1,18 @@
+.Notifications {
+    border: 1px dashed #f81a3d;
+    padding: 10px;
+    position: relative;
+    margin: 1rem;
+}
+
+.Notifications p {
+    font-weight: 550;
+}
+
+.Notifications li[data-priority="default"] {
+    color: blue;
+}
+
+.Notifications li[data-priority="urgent"] {
+    color: red;
+}

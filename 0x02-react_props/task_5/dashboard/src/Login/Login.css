@@ -1,0 +1,17 @@
+.login {
+    color: #000;
+    height: 40vh;
+    margin: 2.5rem;
+  }
+
+  .login p {
+    font-weight: 550;
+  }
+
+  .login label {
+    font-weight: 550;
+  }
+
+  .login input {
+    margin: 0.5rem;
+  }

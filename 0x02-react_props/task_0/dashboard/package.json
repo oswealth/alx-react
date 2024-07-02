@@ -1,0 +1,38 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --mode development --config config/webpack.config.js",
+    "build": "webpack --mode production --config config/webpack.config.js",
+    "start": "webpack serve --open --mode development --config config/webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.24.7",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
+    "babel-loader": "^8.3.0",
+    "css-loader": "^6.11.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.0",
+    "image-webpack-loader": "^8.1.0",
+    "inline-source-map": "^0.6.2",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.15.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.17.9",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
