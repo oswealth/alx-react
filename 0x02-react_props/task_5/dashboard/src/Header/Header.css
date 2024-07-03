@@ -1,14 +1,14 @@
-.header img {
+.App-header img {
     height: 200px;
     width: 200px;
-  }
+}
   
-  .header {
+.App-header {
     display: flex;
     align-items: center;
     border-bottom: 3px solid #e0354b;
-  }
+}
   
-  .header h1 {
+.App-header h1 {
     color: #e0354b;
-  }
+}

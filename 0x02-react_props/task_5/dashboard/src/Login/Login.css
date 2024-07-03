@@ -1,17 +1,17 @@
-.login {
+.App-body {
     color: #000;
     height: 40vh;
     margin: 2.5rem;
-  }
-
-  .login p {
+}
+  
+.App-body p {
     font-weight: 550;
-  }
-
-  .login label {
+}
+  
+.App-body label {
     font-weight: 550;
-  }
-
-  .login input {
+}
+  
+.App-body input {
     margin: 0.5rem;
-  }
+}
