@@ -1,0 +1,17 @@
+.App-body {
+    color: #000;
+    height: 40vh;
+    margin: 2.5rem;
+}
+  
+.App-body p {
+    font-weight: 550;
+}
+  
+.App-body label {
+    font-weight: 550;
+}
+  
+.App-body input {
+    margin: 0.5rem;
+}
