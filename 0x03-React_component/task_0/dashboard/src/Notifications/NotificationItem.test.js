@@ -20,4 +20,3 @@ describe('NotificationItem component', () => {
         expect(listItem.html()).toContain('<li data-urgent="true"><u>test</u></li>');
     });
 });
-
