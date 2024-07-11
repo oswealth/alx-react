@@ -70,26 +70,21 @@ const styles = StyleSheet.create({
     top: "1.8em",
     right: "0",
 
-    "@media (max-width: 375px)": {
+    "@media (max-width: 900px)": {
       display: "block",
-      height: "100vh",
-      width: "100vw",
-      marginLeft: "auto",
-      marginRight: "auto",
+      height: "74vh",
+      width: "95vw",
       border: "none",
       fontSize: "20px",
       padding: "0",
+      backgroundColor: "white",
     },
-  },
-
-  "notification-header": {
-    display: "flex",
-    justifyContent: "space-between",
   },
 
   menuItem: {
     textAlign: "right",
   },
+
 });
 
 Notifications.propTypes = {

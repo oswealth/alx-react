@@ -11,7 +11,7 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
         ) : (
           <>
             <th>{textFirstCell}</th>
-            <th style={headerStyle}>{textSecondCell}</th>
+            <th>{textSecondCell}</th>
           </>
         )
       ) : (

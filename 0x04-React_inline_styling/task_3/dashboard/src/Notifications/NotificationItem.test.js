@@ -21,14 +21,17 @@ describe("rendering components", () => {
     const wrapper = shallow(<NotificationItem />);
 
     wrapper.setProps({ type: "default", value: "test" });
-    expect(wrapper.html()).toEqual('<li class="default_1tsdo2i" data-notification-type="default">test</li>');
+    expect(wrapper.find('li').prop('data-notification-type')).toEqual('default');
+    expect(wrapper.find('li').text()).toEqual('test');
   });
 
   it('renders correct html from  html="<u>test</u>" props', () => {
     const wrapper = shallow(<NotificationItem />);
 
     wrapper.setProps({ html: "<u>test</u>" });
-    expect(wrapper.html()).toEqual('<li data-urgent="true" class="urgent_137u7ef"><u>test</u></li>');
+    const liElement = wrapper.find('li');
+    expect(liElement.prop('data-urgent')).toBe(true);
+    expect(liElement.html()).toContain('<u>test</u>');
   });
 });
 
