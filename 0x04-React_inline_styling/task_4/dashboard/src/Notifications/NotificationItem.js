@@ -18,24 +18,26 @@ class NotificationItem extends React.PureComponent {
   }
 }
 
+
+const screenSize = {
+  small: '@media screen and (max-width: 900px)',
+};
+
+const onSmall = {
+  fontSize: '20px',
+  padding: '10px 8px',
+  borderBottom: '1px solid black',
+  listStyle: 'none',
+};
+
 const styles = StyleSheet.create({
   default: {
     color: "blue",
-    "@media (max-width: 375px)": {
-      borderBottom: "1px solid black",
-      listStyle: "none",
-      fontSize: "20px",
-      padding: "10px 8px",
-    },
+    [screenSize.small]: onSmall,
   },
   urgent: {
     color: "red",
-    "@media (max-width: 375px)": {
-      borderBottom: "1px solid black",
-      listStyle: "none",
-      fontSize: "20px",
-      padding: "10px 8px",
-    },
+    [screenSize.small]: onSmall,
   },
 });
 

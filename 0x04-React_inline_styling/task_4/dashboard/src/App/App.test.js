@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import React from "react";
 import App from "./App";
 import Login from "../Login/Login";
@@ -51,7 +54,7 @@ describe("App tests", () => {
   it("renders courselist if logged in", () => {
     const component = shallow(<App isLoggedIn={true} />);
 
-    expect(component.containsMatchingElement(<CourseList />)).toEqual(false);
+    expect(component.containsMatchingElement(<CourseList />)).toEqual(true);
     expect(component.contains(<Login />)).toBe(false);
   });
 });
@@ -86,7 +89,8 @@ describe("When ctrl + h is pressed", () => {
     document.dispatchEvent(event);
 
     expect(spy).toHaveBeenCalledWith("Logging you out");
-    spy.mockRestore();
+    jest.restoreAllMocks();
     wrapper.unmount();
   });
+  document.alert.mockClear();
 });

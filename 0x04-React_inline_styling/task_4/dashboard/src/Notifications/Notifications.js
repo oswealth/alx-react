@@ -23,11 +23,10 @@ class Notifications extends Component {
   render() {
     return (
       <React.Fragment>
-        {!this.props.displayDrawer ? (
-          <div className={css(styles.menuItem)}>
-            <p>Your notifications</p>
-          </div>
-        ) : (
+        <div className={css(styles.menuItem)}>
+          <p className={css(styles.pee)}>Your notifications</p>
+        </div>
+        {this.props.displayDrawer ? (
           <div className={css(styles.Notifications)}>
             <button
               style={{
@@ -57,7 +56,7 @@ class Notifications extends Component {
               })}
             </ul>
           </div>
-        )}
+        ) : null}
       </React.Fragment>
     );
   }
@@ -82,27 +81,22 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: "1.8em",
     right: "0",
-    zIndex: "100",
+
     "@media (max-width: 900px)": {
-      width: "100%",
-      padding: "0px",
-      fontSize: 20,
-      position: "relative",
-      right: 0,
-      left: 0,
+      display: "block",
+      height: "74vh",
+      width: "95vw",
       border: "none",
+      fontSize: "20px",
+      padding: "0",
+      backgroundColor: "white",
     },
   },
 
-  "notification-header": {
-    display: "flex",
-    justifyContent: "space-between",
-  },
-
   menuItem: {
+    textAlign: "right",
     position: "relative",
     zIndex: 100,
-    textAlign: "right",
     ":hover": {
       cursor: "pointer",
       animationName: [opacityAnim, bounceAnim],
@@ -111,17 +105,6 @@ const styles = StyleSheet.create({
     },
   },
 
-  ul: {
-    "@media (max-width: 900px)": {
-      padding: 0,
-    },
-  },
-  button: {
-    "@media (max-width: 900px)": {
-      position: "relative",
-      float: "right",
-    },
-  },
 });
 
 Notifications.propTypes = {

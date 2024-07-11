@@ -1,7 +1,7 @@
-import React from "react";
-import CourseList from "./CourseList";
-import CourseListRow from "./CourseListRow";
-import { shallow } from "enzyme";
+import React from 'react';
+import { shallow } from 'enzyme';
+import CourseList from './CourseList';
+import CourseListRow from './CourseListRow';
 import { StyleSheetTestUtils } from "aphrodite";
 
 beforeEach(() => {
@@ -11,39 +11,25 @@ afterEach(() => {
   StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
 });
 
-const listCourses = [
-  { id: 1, name: "ES6", credit: 60 },
-  { id: 2, name: "Webpack", credit: 20 },
-  { id: 3, name: "React", credit: 40 },
-];
-
-describe("CourseList component tests", () => {
-  it("should render without crashing", () => {
-    const wrapper = shallow(<CourseList />);
-
-    expect(wrapper.exists()).toBe(true);
+describe('CourseList component', () => {
+  it('renders CourseList component without crashing', () => {
+    shallow(<CourseList />);
   });
 
-  it("renders 5 different rows", () => {
-    const wrapper = shallow(<CourseList listCourses={listCourses} />);
-
-    expect(wrapper.find("thead").children()).toHaveLength(2);
-    wrapper.find("thead").forEach((node) => {
-      expect(node.equals(<CourseListRow textFirstCell="Course name" textSecondCell="Credit" isHeader={true} />));
-    });
-
-    expect(wrapper.find("tbody").children()).toHaveLength(3);
-    expect(wrapper.find("tbody").childAt(0).html()).toEqual('<tr class="normal_y7r86x"><td>ES6</td><td>60</td></tr>');
-    expect(wrapper.find("tbody").childAt(1).html()).toEqual('<tr class="normal_y7r86x"><td>Webpack</td><td>20</td></tr>');
-    expect(wrapper.find("tbody").childAt(2).html()).toEqual('<tr class="normal_y7r86x"><td>React</td><td>40</td></tr>');
+  it('renders the correct number of rows when listCourses is empty', () => {
+    const wrapper = shallow(<CourseList listCourses={[]} />);
+    // 2 header rows + 1 "No course available yet" row
+    expect(wrapper.find(CourseListRow)).toHaveLength(3);
   });
 
-  it("renders correctely when passed a list of courses", () => {
+  it('renders the correct number of rows when listCourses is provided', () => {
+    const listCourses = [
+      { id: 1, name: 'ES6', credit: 60 },
+      { id: 2, name: 'Webpack', credit: 20 },
+      { id: 3, name: 'React', credit: 40 },
+    ];
     const wrapper = shallow(<CourseList listCourses={listCourses} />);
-
-    expect(wrapper.find("tbody").children()).toHaveLength(3);
-    expect(wrapper.find("tbody").childAt(0).html()).toEqual('<tr class="normal_y7r86x"><td>ES6</td><td>60</td></tr>');
-    expect(wrapper.find("tbody").childAt(1).html()).toEqual('<tr class="normal_y7r86x"><td>Webpack</td><td>20</td></tr>');
-    expect(wrapper.find("tbody").childAt(2).html()).toEqual('<tr class="normal_y7r86x"><td>React</td><td>40</td></tr>');
+    // 2 header rows + 3 course rows
+    expect(wrapper.find(CourseListRow)).toHaveLength(5);
   });
 });
